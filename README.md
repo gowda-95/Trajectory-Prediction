@@ -1,4 +1,4 @@
-# Motion_Prediction
+# ADAS - Trajectory Prediction
 Predict trajectory for objects (vehicles, bicycles, pedestrians) in a trajectory dataset collected by drones howering over road intersection using models based on Artificial Neural Networks. 
 
 

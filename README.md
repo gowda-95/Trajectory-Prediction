@@ -18,34 +18,26 @@ PyTorch, NumPy, sklearn, Pandas.
 The following three error metrics are used to evaluate the model
 
 1. **Average Displacement Error (ADE):** 
-Average Displacement Error (ADE): ADE refers to the mean square error (MSE) over all estimated points of every trajectory and the true points.
+ADE refers to the mean square error (MSE) over all estimated points of every trajectory and the true points.
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/103493119/192727935-48e3f89d-c102-41fe-90a4-e742e80e3008.png"/>
+</p>
 
-$$
-\text{ADE} = \frac
-{\sum_{i=1}^{n}\sum_{t=T_{Frame}}^{T_{pred}} \quad  \big[(\hat{x}_i^t - x_i^t)^2 + (\hat{y}_i^t - y_i^t)^2 \big]}
-{n(T_{pred}-(T_{Frame}+1))}
-$$
 
 2. **Final displacement error (FDE):** 
 FDE means the distance between the predicted final destination and the true final destination at the $T_{pred}$ time.
 
-
-$$
-\text{FDE} = \frac
-{\sum_{i=1}^n \sqrt{\big( \, \hat{x}_i^{T_{pred}} - x_i^{T_{pred}} \, \,\big)^2  + \big( \, \hat{y}_i^{T_{pred}} - y_i^{T_{pred}} \, \,\big)^2 }}
-{n}
-$$ 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/103493119/192728133-5bd9d385-eeeb-4331-b3e3-4703ba1ce3e0.png"/>
+</p>
 
 3. **Average Absolute Heading Error (AHE):** 
 This is a bit like ADE but we take the 1-norm of the error and we only consider the heading prediction here.
 
-
-$$
-\text{AHE} = \frac
-{\sum_{i=1}^{n}\sum_{t=T_{Frame}}^{T_{pred}} \quad \big| \hat{y}_i^t - y_i^t \big| }
-{n(T_{pred}-(T_{Frame}+1))}
-$$
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/103493119/192728245-a187e5cd-91b9-4f94-a9c8-1e0590b1b17a.png"/>
+</p>
 
 ## Results
 
